@@ -1,3 +1,4 @@
+![Kamo](pics/kamo.png)
 # 高性能で耐故障な MySQL 互換 DBMS「Kamo」の開発
 
 慶應義塾大学の、宮崎・中森・李です。私たちは、2025年度未踏IT人材発掘・育成事業において、[高性能で耐故障なMySQLの開発](https://www.ipa.go.jp/jinzai/mitou/it/2025/gaiyou-tn-2.html)に取り組みました。
