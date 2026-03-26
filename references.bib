@@ -1,0 +1,215 @@
+@article{10.14778/3415478.3415546,
+author = {Matsunobu, Yoshinori and Dong, Siying and Lee, Herman},
+title = {MyRocks: LSM-tree database storage engine serving Facebook's social graph},
+year = {2020},
+issue_date = {August 2020},
+publisher = {VLDB Endowment},
+volume = {13},
+number = {12},
+issn = {2150-8097},
+url = {https://doi.org/10.14778/3415478.3415546},
+doi = {10.14778/3415478.3415546},
+abstract = {Facebook uses MySQL to manage tens of petabytes of data in its main database named the User Database (UDB). UDB serves social activities such as likes, comments, and shares. In the past, Facebook used InnoDB, a B+Tree based storage engine as the backend. The challenge was to find an index structure using less space and write amplification [1]. LSM-tree [2] has the potential to greatly improve these two bottlenecks. RocksDB, an LSM tree-based key/value store was already widely used in variety of applications but had a very low-level key-value interface. To overcome these limitations, MyRocks, a new MySQL storage engine, was built on top of RocksDB by adding relational capabilities. With MyRocks, using the RocksDB API, significant efficiency gains were achieved while still benefiting from all the MySQL features and tools. The transition was mostly transparent to client applications.Facebook completed the UDB migration from InnoDB to MyRocks in 2017. Since then, ongoing improvements in production operations, and additional enhancements to MySQL, MyRocks, and RocksDB, provided even greater efficiency wins. MyRocks also reduced the instance size by 62.3\% for UDB data sets and performed fewer I/O operations than InnoDB. Finally, MyRocks consumed less CPU time for serving the same production traffic workload. These gains enabled us to reduce the number of database servers in UDB to less than half, saving significant resources. In this paper, we describe our journey to build and run an OLTP LSM-tree SQL database at scale. We also discuss the features we implemented to keep pace with UDB workloads, what made migrations easier, and what operational and software development challenges we faced during the two years of running MyRocks in production.Among the new features we introduced in RocksDB were transactional support, bulk loading, and prefix bloom filters, all are available for the benefit of all RocksDB users.},
+journal = {Proc. VLDB Endow.},
+month = aug,
+pages = {3217–3230},
+numpages = {14}
+}
+
+@misc{rocksdb_website,
+  author       = {{Meta Platforms, Inc.}},
+  title        = {RocksDB: A Persistent Key-Value Store for Fast Storage},
+  howpublished = {\url{https://rocksdb.org/}},
+  year         = {2024},
+  note         = {Accessed: 2026-03-09}
+}
+
+@misc{myrocks_website,
+  author       = {{Meta Platforms, Inc.}},
+  title        = {MyRocks: A RocksDB Storage Engine for MySQL},
+  howpublished = {\url{https://myrocks.io/}},
+  year         = {2024},
+  note         = {Accessed: 2026-03-09}
+}
+
+@misc{lineairdb_pr629,
+  author = {Yusuke Miyazaki and contributors},
+  title = {LineairDB Pull Request 629},
+  howpublished = {\url{https://github.com/LineairDB/LineairDB/pull/629}},
+  year = {2025}
+}
+
+@misc{lineairdb_pr650,
+  author = {Yusuke Miyazaki and contributors},
+  title = {LineairDB Pull Request 650},
+  howpublished = {\url{https://github.com/LineairDB/LineairDB/pull/650}},
+  year = {2025}
+}
+
+@misc{lineairdb_pr655,
+  author = {Yusuke Miyazaki and contributors},
+  title = {LineairDB Pull Request 655},
+  howpublished = {\url{https://github.com/LineairDB/LineairDB/pull/655}},
+  year = {2025}
+}
+
+@misc{lineairdb_pr656,
+  author = {Yusuke Miyazaki and contributors},
+  title = {LineairDB Pull Request 656},
+  howpublished = {\url{https://github.com/LineairDB/LineairDB/pull/656}},
+  year = {2025}
+}
+
+@misc{lineairdb_pr663,
+  author = {Yusuke Miyazaki and contributors},
+  title = {LineairDB Pull Request 663},
+  howpublished = {\url{https://github.com/LineairDB/LineairDB/pull/663}},
+  year = {2025}
+}
+
+@misc{lineairdb_pr670,
+  author = {Yusuke Miyazaki and contributors},
+  title = {LineairDB Pull Request 670},
+  howpublished = {\url{https://github.com/LineairDB/LineairDB/pull/670}},
+  year = {2025}
+}
+
+@misc{lineairdb_pr672,
+  author = {Yusuke Miyazaki and contributors},
+  title = {LineairDB Pull Request 672},
+  howpublished = {\url{https://github.com/LineairDB/LineairDB/pull/672}},
+  year = {2025}
+}
+
+@misc{lineairdb_repo,
+  author = {Sho Nakazono},
+  title = {LineairDB: Fast transactional key-value storage},
+  howpublished = {\url{https://github.com/LineairDB/LineairDB}},
+  year = {2026}
+}
+
+@misc{lineairdb_storage_engine,
+  author       = {Tatsuhiro Nakamori and contributors},
+  title        = {LineairDB-storage-engine},
+  howpublished = {\url{https://github.com/Tatzhiro/LineairDB-storage-engine}},
+  year         = {2024},
+  note         = {GitHub repository, accessed: 2026-03-09}
+}
+
+@misc{lineairdb_ssh,
+  author       = {Yusuke Miyazaki and contributors},
+  title        = {LineairDB-ssh},
+  howpublished = {\url{https://github.com/wasanemon/LineairDB-ssh}},
+  year         = {2024},
+  note         = {GitHub repository, accessed: 2026-03-09}
+}
+
+
+@misc{twitter311,
+    key = "",
+    note = "https://diamond.jp/articles/-/334500"
+}
+
+@inproceedings{shore,
+author = {Johnson, Ryan and Pandis, Ippokratis and Hardavellas, Nikos and Ailamaki, Anastasia and Falsafi, Babak},
+title = {Shore-MT: a scalable storage manager for the multicore era},
+year = {2009},
+isbn = {9781605584225},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1516360.1516365},
+doi = {10.1145/1516360.1516365},
+booktitle = {Proceedings of the 12th International Conference on Extending Database Technology: Advances in Database Technology},
+pages = {24–35},
+numpages = {12},
+location = {Saint Petersburg, Russia},
+series = {EDBT '09}
+}
+
+@misc{alibaba,
+    key = "",
+    note = "https://www.softbank.jp/biz/blog/cloud-technology/articles/202011/alibaba-singles-day/"
+}
+
+@inproceedings{silo,
+author = {Tu, Stephen and Zheng, Wenting and Kohler, Eddie and Liskov, Barbara and Madden, Samuel},
+title = {Speedy transactions in multicore in-memory databases},
+year = {2013},
+isbn = {9781450323888},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2517349.2522713},
+doi = {10.1145/2517349.2522713},
+booktitle = {Proceedings of the Twenty-Fourth ACM Symposium on Operating Systems Principles},
+pages = {18–32},
+numpages = {15},
+location = {Farminton, Pennsylvania},
+series = {SOSP '13}
+}
+
+@inproceedings{ermia,
+author = {Kim, Kangnyeon and Wang, Tianzheng and Johnson, Ryan and Pandis, Ippokratis},
+title = {ERMIA: Fast Memory-Optimized Database System for Heterogeneous Workloads},
+year = {2016},
+isbn = {9781450335317},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2882903.2882905},
+doi = {10.1145/2882903.2882905},
+booktitle = {Proceedings of the 2016 International Conference on Management of Data},
+pages = {1675–1687},
+numpages = {13},
+keywords = {serial safety net, multiversion concurrency control, multicore scalability, main-memory databases, log manager, indirection arrays, heterogeneous workloads, epoch-based resource management, append-only storage},
+location = {San Francisco, California, USA},
+series = {SIGMOD '16}
+}
+
+@article{oze,
+author = {Nemoto, Jun and Kambayashi, Takashi and Hoshino, Takashi and Kawashima, Hideyuki},
+title = {Oze: Decentralized Graph-Based Concurrency Control for Long-Running Update Transactions},
+year = {2025},
+issue_date = {April 2025},
+publisher = {VLDB Endowment},
+volume = {18},
+number = {8},
+issn = {2150-8097},
+url = {https://doi.org/10.14778/3742728.3742730},
+doi = {10.14778/3742728.3742730},
+journal = {Proc. VLDB Endow.},
+month = apr,
+pages = {2321–2333},
+numpages = {13}
+}
+
+@inproceedings{myraft,
+  title = {MyRaft: High Availability in MySQL using Raft},
+  author = {Anirban Rahut and Vinaykumar Bhat and Abhinav Sharma and Yichen Shen and Bartlomiej Pelc and Chi Li and Ahsanul Haque and Yash Botadra and Xi Wang and Michael Percy and Ritwik Yadav and Yoshinori Matsunobu and Alan Liang and Igor Pozgaj and Tobias Asplund and Anatoly Karp and Luqun Lou and Pushap Goyal},
+  year = {2024},
+  doi = {10.48786/edbt.2024.64},
+  url = {https://doi.org/10.48786/edbt.2024.64},
+  cites = {0},
+  citedby = {0},
+  pages = {743-752},
+  booktitle = {Proceedings 27th International Conference on Extending Database Technology, EDBT 2024, Paestum, Italy, March 25 - March 28},
+  editor = {Letizia Tanca and Qiong Luo 0001 and Giuseppe Polese and Loredana Caruccio and Xavier Oriol and Donatella Firmani},
+  publisher = {OpenProceedings.org},
+  isbn = {978-3-89318-091-2},
+}
+
+@misc{mysql_architecture,
+  title = {MySQL Storage Engine Architecture},
+  author = {{Oracle Corporation}},
+  year = {2024},
+  howpublished = {\url{https://dev.mysql.com/doc/refman/8.0/ja/pluggable-storage-overview.html}},
+  note = {Accessed: 2026-03-08}
+}
+
+@misc{mysql_pluggable_storage_overview,
+  author       = {{Oracle Corporation}},
+  title        = {Overview of MySQL Storage Engine Architecture},
+  howpublished = {\url{https://dev.mysql.com/doc/refman/8.4/en/pluggable-storage-overview.html}},
+  note         = {MySQL 8.4 Reference Manual},
+  year         = {2024},
+  urldate      = {2026-03-09}
+}
+
