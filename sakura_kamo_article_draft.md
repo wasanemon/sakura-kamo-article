@@ -49,8 +49,7 @@ MySQLは、サーバ層とストレージエンジン層が分離された構造
 ### 3. 耐障害性と可用性を付与する構成の実装
 
 可用性の実現にあたっては、当初Raftの導入も検討しました。しかし、その実装にはMySQL本体の大規模な改変が必要であり、開発期間内での実現可能性を踏まえて方針を変更しました。
-
-最終的には、MySQL標準のSemi-Synchronous Replicationを採用し、さらにOrchestratorによるPrimary障害の自動検知とReplicaの昇格、ProxySQLによる接続先制御を組み合わせることで、自動Failoverを実現しました。これにより、障害発生時にもサービスを継続可能な構成を整備しました。
+最終的には、LineairDBストレージエンジンをMySQL標準のSemi-Synchronous Replicationに対応させ、さらにOrchestratorによるPrimary障害の自動検知とReplicaの昇格、ProxySQLによる接続先制御を組み合わせることで、データの冗長性と自動Failoverを実現しました。これにより、障害発生時にもサービスを継続可能な構成を整備しました。
 
 ## さくらインターネットのサーバ環境で行ったこと
 
